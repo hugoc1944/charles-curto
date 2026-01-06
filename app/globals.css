@@ -4,7 +4,7 @@
 body {
   font-family: var(--font-body);
   color: #1B1E23;
-  background-color: #F5EFE6;
+  background-color: #FCFAF5;
 }
 
 /* Typography roles */
@@ -20,12 +20,82 @@ body {
   font-family: var(--font-brand);
 }
 /* =========================================================
+   Typography scale — Headings
+========================================================= */
+
+.heading-xl {
+  font-family: var(--font-title);
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 0.82;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.heading-lg {
+  font-family: var(--font-title);
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.heading-md {
+  font-family: var(--font-title);
+  font-size: 28px;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.heading-sm {
+  font-family: var(--font-title);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+/* =========================================================
+   Typography scale — Body
+========================================================= */
+
+.body-lg {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+}
+
+.body-md {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
    Gradient tokens
 ========================================================= */
 
 .bg-goldenLinear {
   background-image: linear-gradient(
     90deg,
+    #AF8A57 0%,
+    #C7A36A 25%,
+    #E8D3A8 50%,
+    #C7A36A 85%,
+    #A37F4A 100%
+  );
+}
+/* =========================================================
+   Star badge gradient (rotated highlight)
+========================================================= */
+.bg-goldenLinear-tilted {
+  background-image: linear-gradient(
+    135deg,                /* 👈 rotated */
     #AF8A57 0%,
     #C7A36A 25%,
     #E8D3A8 50%,
@@ -61,4 +131,83 @@ body {
     #1F2E5A 75%,
     #0F1E4A 100%
   );
+}
+
+/* =========================================================
+   Gradient stroke utility (inside border)
+========================================================= */
+
+.gradient-stroke-gold {
+  background:
+    linear-gradient(#FBFAFA, #FFFAF1) padding-box,
+    linear-gradient(
+      90deg,
+      #AF8A57 0%,
+      #C7A36A 25%,
+      #E8D3A8 50%,
+      #C7A36A 85%,
+      #A37F4A 100%
+    ) border-box;
+  border: 1px solid transparent;
+}
+.gradient-stroke-gold-dark {
+  background:
+    linear-gradient(#0F1E4A, #0F1E4A) padding-box,
+    linear-gradient(
+      90deg,
+      #AF8A57 0%,
+      #C7A36A 25%,
+      #E8D3A8 50%,
+      #C7A36A 85%,
+      #A37F4A 100%
+    ) border-box;
+  border: 1px solid transparent;
+}
+
+/* =========================================================
+   Dotted golden gradient border (InfoNotice)
+========================================================= */
+.info-notice-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 1px;
+  background: linear-gradient(
+    90deg,
+    #AF8A57 0%,
+    #C7A36A 25%,
+    #E8D3A8 50%,
+    #C7A36A 85%,
+    #A37F4A 100%
+  );
+  -webkit-mask:
+    repeating-linear-gradient(
+      90deg,
+      #000 0 6px,
+      transparent 6px 16px
+    )
+    content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* =========================================================
+   Premium button shine layer
+========================================================= */
+.button-shine {
+  position: absolute;
+  inset: -60%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 65%
+  );
+
+  mix-blend-mode: soft-light;
 }

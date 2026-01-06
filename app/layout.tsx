@@ -5,6 +5,10 @@ import {
   Alex_Brush,
 } from "next/font/google";
 import "./globals.css";
+import { NavigationProvider } from "@/navigation/NavigationProvider";
+import { BookToggle } from "@/components/navigation/BookToggle";
+import { NavigationOverlay } from "@/components/navigation/NavigationOverlay";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 
 /* Brand / signature */
 const alexBrush = Alex_Brush({
@@ -41,17 +45,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
-      <body
-        className={`${sourceSans.variable} ${cormorant.variable} ${alexBrush.variable}`}
-      >
-        {/* Font activators (do not remove) */}
-        <span className={cormorant.className} style={{ display: "none" }} />
-        <span className={alexBrush.className} style={{ display: "none" }} />
+    <html
+      lang="fr"
+      className={`
+        ${alexBrush.variable}
+        ${cormorant.variable}
+        ${sourceSans.variable}
+      `}
+    >
+      <body>
+        <ScrollToTop />
 
-        {children}
+        <NavigationProvider>
+          <div id="navigation-layer">
+            <BookToggle />
+            <NavigationOverlay />
+          </div>
+
+          <div id="page-layer">
+                {children}
+          </div>
+        </NavigationProvider>
       </body>
     </html>
   );
 }
-
