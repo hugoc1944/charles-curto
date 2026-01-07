@@ -6,7 +6,7 @@ import { StarBadge } from "../ui/StarBadge";
 
 export function HomePrivateConsultationCard() {
   return (
-    <CardElement className="p-6 pt-8 md:p-8 pb-5 flex flex-col h-full">
+  <CardElement className="p-6 pt-8 md:p-8 pb-5 flex flex-col">
     <div className="flex items-center gap-2">
         <StarBadge />
 
@@ -25,11 +25,7 @@ export function HomePrivateConsultationCard() {
         familiales, clarifier un chemin ou dissiper ce qui vous pèse.
       </p>
 
-      {/* PUSH CONTENT UP */}
-      <div className="flex-1" />
-
-      {/* CTA ZONE */}
-      <div className="flex flex-col mt-8 md:mt-0 gap-3">
+      <div className="flex flex-col gap-3 mt-auto pt-8">
         {/* Buttons (aligned) */}
         <div className="flex flex-col gap-3">
           <Button variant="primary" className="w-full text-[19px]">

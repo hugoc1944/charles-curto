@@ -44,7 +44,7 @@ export function NavigationMenu() {
 
   return (
     <nav className="w-full">
-        <ul className="mx-auto max-w-5xl space-y-12 md:space-y-20">
+      <ul className="mx-auto max-w-5xl space-y-8 md:space-y-20">
         {items.map((item) => (
           <m.li
             key={item.href}
@@ -136,7 +136,7 @@ export function NavigationMenu() {
                       font-title
                       text-[17px] md:text-[20px]
                       leading-[1.1] md:leading-[1]
-                      whitespace-pre-line
+                      whitespace-normal md:whitespace-pre-line
                       max-w-md
                     "
                   >
