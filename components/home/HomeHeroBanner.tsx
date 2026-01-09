@@ -39,7 +39,7 @@ export function HomeHeroBanner() {
       {/* Mobile image */}
       <div className="block md:hidden">
         <Image
-          src="/images/home/Main_Thumbnail_Mobile_v3.png"
+          src="/images/home/Main_Thumbnail_mobile_final.png"
           alt="Charles Curto"
           priority
           width={900}
