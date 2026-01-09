@@ -2,6 +2,7 @@
 
 import { FullBleed } from "@/components/layout/FullBleed";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export function HomeAuthoritySection() {
   return (
@@ -13,7 +14,7 @@ export function HomeAuthoritySection() {
              Title & subtitle (centered)
           ========================================================== */}
           <div className="text-center space-y-6">
-            <h2 className="font-title font-semibold text-[42px] md:text-[48px] leading-[1.1]">
+            <h2 className="font-title text-[#1F2E5A] font-semibold text-[42px] md:text-[48px] leading-[1.1]">
               Charles Curto | Guidance Spirituelle &<br />
               Accompagnement Énergétique
             </h2>
@@ -42,9 +43,11 @@ export function HomeAuthoritySection() {
           {/* =========================================================
              CTA
           ========================================================== */}
-          <Button variant="authority">
-            Découvrir les consultations
-          </Button>
+          <Link href="/consultations" className="inline-block">
+            <Button variant="authority">
+              Découvrir les consultations
+            </Button>
+          </Link>
         </div>
       </section>
     </FullBleed>

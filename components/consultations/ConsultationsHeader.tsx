@@ -73,7 +73,7 @@ export function ConsultationsHeader() {
           "
         >
           <TrustPill>Une pratique reconnue</TrustPill>
-          <TrustPill>⭐ 40+ ans d’expérience</TrustPill>
+          <TrustPill>40+ ans d’expérience</TrustPill>
           <TrustPill>Guidance confidentielle</TrustPill>
           <TrustPill>Paris · Lyon</TrustPill>
         </div>

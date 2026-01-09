@@ -74,7 +74,7 @@ export function CoachingHeader() {
           "
         >
           <TrustPill>Accompagnement dans la durée</TrustPill>
-          <TrustPill>⭐ 40+ ans d’expérience</TrustPill>
+          <TrustPill>40+ ans d’expérience</TrustPill>
           <TrustPill>Relation de confiance</TrustPill>
           <TrustPill>Présence continue</TrustPill>
           <TrustPill>Coaching individuel</TrustPill>

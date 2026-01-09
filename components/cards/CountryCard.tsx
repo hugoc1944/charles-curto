@@ -1,4 +1,3 @@
-// components/cards/CountryCard.tsx
 "use client";
 
 import { CardElement } from "@/components/ui/CardElement";
@@ -21,31 +20,37 @@ export function CountryCard({
   domain,
 }: CountryCardProps) {
   return (
-    <CardElement className="w-[360px] p-8 flex flex-col">
+    <CardElement className="p-8 flex flex-col h-full">
       <CardBadge variant="outline">
         {country}
       </CardBadge>
 
-      <CardTitle className="mt-5">
+      <CardTitle className="mt-5 text-[28px]">
         {title}
       </CardTitle>
 
-      <CardDescription className="mt-3">
+      <CardDescription className="mt-3 text-[17px] leading-[1.6]">
         {description}
       </CardDescription>
 
-      {/* Domain line — follows same rhythm slot as feature list */}
-      <div className="mt-4 font-body text-[16px] text-[#6B6B6B] flex items-center gap-2">
-        <span className="text-accent">✦</span>
-        <span className="italic">{domain}</span>
-      </div>
-
+      {/* Push everything below to the same baseline */}
       <div className="flex-1" />
 
+      {/* Domain — anchored */}
+      <div className="flex items-center gap-2 text-[#6B6B6B] mb-6 mt-3">
+        <span className="bg-goldenLinear bg-clip-text text-transparent text-[20px] leading-[1]">
+          ✦
+        </span>
+        <span className="italic font-body text-[16px] font-bold">
+          {domain}
+        </span>
+      </div>
+
+      {/* Button — always bottom */}
       <Button
         variant="primary"
         size="md"
-        className="w-full text-[16px] leading-[1.2] tracking-[0.08em] font-semibold normal-case py-[15px] mt-5"
+        className="w-full text-[16px] tracking-[0.08em]"
       >
         Accéder au site
       </Button>

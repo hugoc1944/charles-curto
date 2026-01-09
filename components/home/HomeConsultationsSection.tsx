@@ -4,6 +4,7 @@ import { HomePrivateConsultationCard } from "@/components/cards/HomePrivateConsu
 import { HomeExclusiveCoachingCard } from "@/components/cards/HomeExclusiveCoachingCard";
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export function HomeConsultationsSection() {
   return (
@@ -69,9 +70,11 @@ export function HomeConsultationsSection() {
             À propos de Charles
           </Button>
 
-          <Button variant="primary" size="lg" className=" md:px-53">
-            Réserver votre Séance Privée
-          </Button>
+            <Link href="/consultations" className="inline-block">
+              <Button variant="primary" size="lg" className="md:px-53">
+                Réserver votre Séance Privée
+              </Button>
+            </Link>
         </div>
       </div>
     </section>

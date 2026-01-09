@@ -122,6 +122,16 @@ body {
   );
 }
 
+.bg-textHighlightGolden-vertical {
+  background-image: linear-gradient(
+    180deg,
+    #EED9AE 0%,
+    #C7A36A 45%,
+    #B08A4F 70%,
+    #EED9AE 100%
+  );
+}
+
 .bg-navGradient {
   background-image: linear-gradient(
     90deg,

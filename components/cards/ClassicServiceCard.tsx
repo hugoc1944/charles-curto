@@ -41,7 +41,7 @@ export function ClassicServiceCard() {
         size="lg"
         className="w-full text-[18px] normal-case mt-8 leading-[1]"
       >
-        Réserver une consultation — téléphone / cabinet · 100€
+        Réserver une consultation — téléphone / cabinet
       </Button>
 
       <CardFooter className="mt-4 text-[14px] text-[#6B6B6B]">

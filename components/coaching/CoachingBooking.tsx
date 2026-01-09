@@ -5,6 +5,7 @@ import { InfoNotice } from "@/components/ui/InfoNotice";
 import { SignatureServiceCard } from "@/components/cards/SignatureServiceCard";
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export function CoachingBooking() {
   return (
@@ -15,7 +16,7 @@ export function CoachingBooking() {
 
         {/* Intro */}
         <div className="text-center mt-10 md:mt-15 mb-15 md:mb-20">
-          <h2 className="font-title leading-[1] text-[38px] md:text-[72px] font-semibold">
+          <h2 className="font-title leading-[1] text-[38px] md:text-[72px] text-[#1F2E5A] font-semibold">
             Réservez votre accompagnement avec Charles Curto
           </h2>
 
@@ -30,7 +31,7 @@ export function CoachingBooking() {
           Consultation privée
         </p>
 
-        <h3 className="text-center leading-[1] md:leading-[1.5] font-title text-[32px] md:text-[48px] mb-10">
+        <h3 className="text-center leading-[1] md:leading-[1.5] font-title text-[32px] text-[#1F2E5A] md:text-[48px] mb-10">
           Séance Signature
         </h3>
 
@@ -62,9 +63,11 @@ export function CoachingBooking() {
 
         {/* CTAs */}
         <div className="flex flex-col items-center gap-4 mt-10 leading-[1] md:leading-[1.5]">
-          <Button variant="softFilled" size="lg">
-            Une question avant de réserver ? Écrivez-nous
-          </Button>
+          <Link href="/contact" className="inline-block">
+            <Button variant="softFilled" size="lg">
+              Une question avant de réserver ? Écrivez-nous
+            </Button>
+          </Link>
 
           <Button variant="authority" size="lg">
             Ressources gratuites — Instagram

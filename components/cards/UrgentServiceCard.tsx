@@ -43,7 +43,7 @@ export function UrgentServiceCard() {
         size="lg"
         className="w-full text-[18px] normal-case mt-8 leading-[1] "
       >
-        Demande urgente — téléphone / visio · 150€
+        Demande urgente — téléphone / visio
       </Button>
 
       <CardFooter className="mt-4 text-[14px] text-[#6B6B6B]">

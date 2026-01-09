@@ -92,6 +92,7 @@ export function Button({
         "inline-flex items-center justify-center",
         "font-body tracking-wide",
         "focus:outline-none",
+        "cursor-pointer",
 
         // Sizes (default buttons)
         size === "md" && !isDiscover && "px-8 py-3 text-[15px]",

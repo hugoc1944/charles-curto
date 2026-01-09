@@ -3,6 +3,7 @@
 import { CardElement } from "@/components/ui/CardElement";
 import { Button } from "@/components/ui/Button";
 import { StarBadge } from "../ui/StarBadge";
+import Link from "next/link";
 
 export function HomePrivateConsultationCard() {
   return (
@@ -28,9 +29,12 @@ export function HomePrivateConsultationCard() {
       <div className="flex flex-col gap-3 mt-auto pt-8">
         {/* Buttons (aligned) */}
         <div className="flex flex-col gap-3">
-          <Button variant="primary" className="w-full text-[19px]">
-            Découvrir la consultation
-          </Button>
+          <Link href="/consultations" className="inline-block">
+            <Button variant="primary" className="w-full text-[19px]">
+               Découvrir la consultation
+            </Button>
+          </Link>
+          
 
           <Button variant="soft" className="w-full text-[19px]">
             Modalités

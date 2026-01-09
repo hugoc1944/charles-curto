@@ -68,7 +68,7 @@ export function CoachingFAQ() {
                 {/* Question row */}
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between text-left"
+                  className="w-full flex items-center justify-between text-left cursor-pointer"
                 >
                   <span className="font-title text-[22px] md:text-[24px]">
                     {item.question}

@@ -55,7 +55,7 @@ export function ConsultationsFAQ() {
     <section className="w-screen bg-[#FCFAF5] py-10">
       <div className="max-w-[900px] mx-auto px-6">
         {/* Title */}
-        <h2 className="font-title text-[48px] leading-[1] md:leading-[1.5] md:text-[64px] text-center mb-6 md:mb-10">
+        <h2 className="font-title text-[48px] leading-[1] md:leading-[1.5] md:text-[64px] text-[#1F2E5A] text-center mb-6 md:mb-10">
           Avant votre consultation
         </h2>
 
@@ -69,7 +69,7 @@ export function ConsultationsFAQ() {
                 {/* Question row */}
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between text-left"
+                  className="w-full flex items-center justify-between text-left cursor-pointer"
                 >
                   <span className="font-title text-[22px] md:text-[24px]">
                     {item.question}
