@@ -14,6 +14,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   type?: "button" | "submit";
+  disabled?: boolean;
 }
 
 const shadowVariants = {
@@ -56,12 +57,14 @@ export function Button({
   className,
   onClick,
   type = "button",
+  disabled = false,
 }: ButtonProps) {
   const isDiscover = variant === "discover";
 
   return (
     <m.button
       type={type}
+      disabled={disabled}
       onClick={onClick}
       initial="rest"
       whileHover="hover"
@@ -92,11 +95,12 @@ export function Button({
         "inline-flex items-center justify-center",
         "font-body tracking-wide",
         "focus:outline-none",
-        "cursor-pointer",
 
+        !disabled && "cursor-pointer",
+        disabled && "cursor-not-allowed opacity-50 pointer-events-none",
         // Sizes (default buttons)
         size === "md" && !isDiscover && "px-8 py-3 text-[15px]",
-        size === "lg" && !isDiscover && "px-10 py-4 text-[19px]",
+        size === "lg" && !isDiscover && "px-8 py-[14px] text-[19px]",
 
         // Discover spacing (wider)
         size === "md" && isDiscover && "px-16 py-3 text-[15px]",
@@ -129,7 +133,7 @@ export function Button({
             "text-[19px]",
             "tracking-[0.05em]",
             "rounded-[14px]",
-            "px-15 md:px-25 py-4",
+            "px-8 md:px-12 py-[14px]",
           ],
           variant === "softFilled" &&
             [

@@ -4,7 +4,7 @@ export function CoachingCoreStatement() {
   return (
     <section
       className="
-        w-screen
+        w-full
         bg-[#FCFAF5]
         mt-5
         py-10
@@ -49,7 +49,7 @@ export function CoachingCoreStatement() {
         ========================================================== */}
         <div
           className="
-            w-screen
+            w-full
             h-[120px]
             md:h-[220px]
             lg:h-[241px]

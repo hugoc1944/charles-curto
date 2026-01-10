@@ -7,6 +7,7 @@ import { getRelatedEcrits } from "@/lib/ecrits";
 import { RelatedEcrits } from "@/components/ecrits/RelatedEcrits";
 import { EcritContent } from "./EcritContent";
 import { PageFade } from "@/components/transitions/PageFade";
+import { VeilLink } from "@/components/navigation/VeilLink";
 
 interface PageProps {
   params: { slug: string };
@@ -41,10 +42,10 @@ export default async function EcritPage(
     <>
       <ScrollProgress />
       <PageFade>
-      <section className="w-screen bg-[#F7F6F2] pt-32 pb-40">
+      <section className="w-full bg-[#F7F6F2] pt-32 pb-40">
         <article className="max-w-[780px] mx-auto px-6">
         <div className="mb-12">
-          <Link
+          <VeilLink
               href="/ecrits"
               className="
               inline-flex
@@ -57,10 +58,11 @@ export default async function EcritPage(
               text-[#8F8A7E]
               hover:text-[#C7A36A]
               transition
+              cursor-pointer
               "
           >
               ← Tous les écrits
-          </Link>
+          </VeilLink>
           </div>
           <header className="mb-20">
             <h1 className="font-title text-[#1F2E5A] text-[40px] md:text-[56px] leading-[1.1]">
@@ -92,22 +94,6 @@ export default async function EcritPage(
               readingTime: e.meta.readingTime,
             }))}
           />
-
-          <footer className="mt-28 text-center">
-            <p className="font-body text-[17px] text-[#6B6B6B] max-w-[420px] mx-auto">
-              Certaines situations appellent parfois un éclairage plus personnel.
-            </p>
-
-            <div className="mt-6">
-              <Link
-                href="/consultations"
-                className="font-body text-[16px] tracking-[0.2em] uppercase text-[#1F2E5A] hover:text-[#C7A36A] transition"
-              >
-                Éclairer une situation
-              </Link>
-            </div>
-          </footer>
-
         </article>
       </section>
       </PageFade>

@@ -7,8 +7,10 @@ import { CardDescription } from "@/components/ui/card/CardDescription";
 import { CardFeatureList } from "@/components/ui/card/CardFeatureList";
 import { CardFooter } from "@/components/ui/card/CardFooter";
 import { Button } from "@/components/ui/Button";
+import { useBooking } from "@/contexts/BookingContext";
 
 export function ClassicServiceCard() {
+  const { openBooking } = useBooking();
   return (
     <CardElement className="p-6 pt-8 md:p-8 flex flex-col h-full">
       <CardBadge variant="outline">CONSULTATION CLASSIQUE</CardBadge>
@@ -40,6 +42,7 @@ export function ClassicServiceCard() {
         variant="primary"
         size="lg"
         className="w-full text-[18px] normal-case mt-8 leading-[1]"
+        onClick={() => openBooking("classic")}
       >
         Réserver une consultation — téléphone / cabinet
       </Button>

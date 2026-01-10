@@ -7,7 +7,7 @@ interface FullBleedProps {
 
 export function FullBleed({ children }: FullBleedProps) {
   return (
-    <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+    <div className="w-full relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
       {children}
     </div>
   );

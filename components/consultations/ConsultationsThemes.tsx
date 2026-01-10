@@ -25,7 +25,7 @@ export function ConsultationsThemes() {
   return (
     <section
       className="
-        w-screen
+        w-full
         bg-[#FCFAF5]
         pb-24
       "

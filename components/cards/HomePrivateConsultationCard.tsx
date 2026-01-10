@@ -35,10 +35,11 @@ export function HomePrivateConsultationCard() {
             </Button>
           </Link>
           
-
-          <Button variant="soft" className="w-full text-[19px]">
-            Modalités
-          </Button>
+          <Link href="/consultations#consultations-modalites">
+            <Button variant="soft" className="w-full text-[19px]">
+              Modalités
+            </Button>
+          </Link>
         </div>
 
         {/* Helper text placeholder — IMPORTANT */}

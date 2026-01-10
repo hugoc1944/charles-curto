@@ -159,10 +159,10 @@ export function NavigationMenu() {
           >
             {items.map((item) => (
               <m.li
-                key={item.title}
                 initial="rest"
                 animate="rest"
                 whileHover="hover"
+                whileTap="hover"
                 transition={{
                   duration: motion.duration.slow,
                   ease: motion.ease.calm,
@@ -211,6 +211,7 @@ export function NavigationMenu() {
                 initial="rest"
                 animate="rest"
                 whileHover="hover"
+                whileTap="hover"
                 exit={{ opacity: 0, y: -12 }}
                 transition={{
                   duration: motion.duration.slow,

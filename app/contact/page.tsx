@@ -19,7 +19,7 @@ export default function ContactPage() {
     }
   }, [sent]);
   return (
-    <section className="w-screen bg-[#FCFAF5] py-24">
+    <section className="w-full bg-[#FCFAF5] py-24 md:py-36">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
@@ -30,7 +30,7 @@ export default function ContactPage() {
             <h1 className="
               font-title
               text-[59px]
-              md:text-[72px]
+              md:text-[82px]
               leading-[1]
               text-[#1F2E5A]
             ">
@@ -161,7 +161,7 @@ export default function ContactPage() {
             >
                 Écrire un message
             </h2>
-    <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait">
 
             {!sent ? (
                 <motion.form

@@ -1,7 +1,14 @@
 "use client";
 
-export function SectionSeparator() {
+interface SectionSeparatorProps {
+  id?: string;
+}
+
+export function SectionSeparator({ id }: SectionSeparatorProps) {
   return (
-    <div className="w-full md:w-[80%] mx-auto h-px bg-goldenLinear opacity-80" />
+    <div
+      id={id}
+      className="w-full md:w-[80%] mx-auto h-px bg-goldenLinear opacity-80 scroll-mt-15"
+    />
   );
 }

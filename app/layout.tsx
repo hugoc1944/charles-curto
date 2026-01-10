@@ -9,6 +9,9 @@ import { NavigationProvider } from "@/navigation/NavigationProvider";
 import { BookToggle } from "@/components/navigation/BookToggle";
 import { NavigationOverlay } from "@/components/navigation/NavigationOverlay";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
+import { PageTransitionVeil } from "@/components/layout/PageTransitionVeil";
+import { BookingProvider } from "@/contexts/BookingContext";
+import { BookingModal } from "@/components/booking/BookingModal";
 
 /* Brand / signature */
 const alexBrush = Alex_Brush({
@@ -57,14 +60,17 @@ export default function RootLayout({
         <ScrollToTop />
 
         <NavigationProvider>
-          <div id="navigation-layer">
-            <BookToggle />
-            <NavigationOverlay />
-          </div>
-
-          <div id="page-layer">
-                {children}
-          </div>
+          <BookingProvider>
+            <PageTransitionVeil/>
+            <div id="navigation-layer">
+              <BookToggle />
+              <NavigationOverlay />
+            </div>
+              <BookingModal />
+            <div id="page-layer">
+                  {children}
+            </div>
+          </BookingProvider>
         </NavigationProvider>
       </body>
     </html>

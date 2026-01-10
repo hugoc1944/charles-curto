@@ -12,8 +12,10 @@ import { ConsultationsThemes } from "@/components/consultations/ConsultationsThe
 import { ConsultationsBooking } from "@/components/consultations/ConsultationsBooking";
 import { AboutCharles } from "@/components/consultations/AboutCharles";
 import { ConsultationsFAQ } from "@/components/consultations/ConsultationsFAQ";
+import { useScrollToHash } from "@/hooks/useScrollToHash";
 
 export default function ConsultationsPage() {
+  useScrollToHash(600);
   return (
     <PageTransition>
         <m.main

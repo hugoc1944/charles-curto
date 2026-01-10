@@ -63,20 +63,43 @@ export function HomeConsultationsSection() {
         </div>
 
         {/* =========================================================
-           Bottom CTAs
-        ========================================================== */}
+          Bottom CTAs
+        ========================================================= */}
         <div className="flex flex-col items-center gap-4">
-          <Button variant="authority" size="lg" className=" md:px-60">
-            À propos de Charles
-          </Button>
-
-            <Link href="/consultations" className="inline-block">
-              <Button variant="primary" size="lg" className="md:px-53">
-                Réserver votre Séance Privée
+          <div className="w-full max-w-[420px] flex flex-col gap-4">
+            <Link href="/contact" className="block w-full">
+              <Button
+                variant="softFilled"
+                size="lg"
+                className="w-full"
+              >
+                Une question avant de réserver ?
               </Button>
             </Link>
+
+            <Link href="/consultations" className="block w-full">
+              <Button
+                variant="authority"
+                size="lg"
+                className="w-full"
+              >
+                Réserver votre séance privée
+              </Button>
+            </Link>
+          </div>
         </div>
+
       </div>
     </section>
   );
+}
+
+export function scrollToId(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
 }

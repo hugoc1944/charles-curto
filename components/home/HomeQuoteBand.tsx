@@ -11,7 +11,7 @@ export function HomeQuoteBand() {
         ========================================================== */}
         <div
           className="
-            w-screen
+            w-full
             h-[120px]
             md:h-[220px]
             lg:h-[241px]

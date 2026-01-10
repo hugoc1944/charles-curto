@@ -34,10 +34,11 @@ export function HomeExclusiveCoachingCard() {
               Découvrir l’accompagnement
             </Button>
           </Link>
-
-          <Button variant="soft" className="w-full text-[19px]">
-            Comprendre le coaching exclusif
-          </Button>
+          <Link href="/coaching#comprendre-coaching">
+            <Button variant="soft" className="w-full text-[19px]">
+              Comprendre le coaching exclusif
+            </Button>
+          </Link>
         </div>
 
         {/* Helper text */}

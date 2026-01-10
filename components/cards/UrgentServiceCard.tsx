@@ -11,7 +11,10 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/Button";
 
+import { useBooking } from "@/contexts/BookingContext";
+
 export function UrgentServiceCard() {
+  const { openBooking } = useBooking();
   return (
     <CardElement className="p-6 pt-8 md:p-8 flex flex-col h-full">
       <CardBadge variant="dark">EN URGENCE</CardBadge>
@@ -42,6 +45,7 @@ export function UrgentServiceCard() {
         variant="primary"
         size="lg"
         className="w-full text-[18px] normal-case mt-8 leading-[1] "
+        onClick={() => openBooking("urgent")}
       >
         Demande urgente — téléphone / visio
       </Button>

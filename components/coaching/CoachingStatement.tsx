@@ -4,7 +4,7 @@ export function CoachingStatement() {
   return (
     <section
       className="
-        w-screen
+        w-full
         bg-[#FCFAF5]
         py-32
         md:py-46
@@ -17,7 +17,9 @@ export function CoachingStatement() {
           px-5
           md:px-15
           text-center
+          scroll-mt-20
         "
+        id="comprendre-coaching"
       >
         <p
           className="

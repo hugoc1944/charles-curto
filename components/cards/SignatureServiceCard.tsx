@@ -6,8 +6,10 @@ import { CardTitle } from "@/components/ui/card/CardTitle";
 import { CardFooter } from "@/components/ui/card/CardFooter";
 import { Button } from "@/components/ui/Button";
 import { PremiumFeatureList } from "@/components/ui/PremiumFeatureList";
+import { useBooking } from "@/contexts/BookingContext";
 
 export function SignatureServiceCard() {
+  const { openBooking } = useBooking();
   return (
     <CardElement className="w-[520px] p-8 flex flex-col">
       <CardBadge variant="outline">
@@ -61,6 +63,7 @@ export function SignatureServiceCard() {
         variant="primary"
         size="lg"
         className="w-full text-[18px] leading-[1.2] tracking-[0.08em] font-semibold normal-case py-[18px] mt-10"
+        onClick={() => openBooking("signature")}
       >
         Réserver la Séance Signature
       </Button>

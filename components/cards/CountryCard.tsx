@@ -21,9 +21,7 @@ export function CountryCard({
 }: CountryCardProps) {
   return (
     <CardElement className="p-8 flex flex-col h-full">
-      <CardBadge variant="outline">
-        {country}
-      </CardBadge>
+      <CardBadge variant="outline">{country}</CardBadge>
 
       <CardTitle className="mt-5 text-[28px]">
         {title}
@@ -33,10 +31,10 @@ export function CountryCard({
         {description}
       </CardDescription>
 
-      {/* Push everything below to the same baseline */}
+      {/* Spacer to align bottoms */}
       <div className="flex-1" />
 
-      {/* Domain — anchored */}
+      {/* Domain */}
       <div className="flex items-center gap-2 text-[#6B6B6B] mb-6 mt-3">
         <span className="bg-goldenLinear bg-clip-text text-transparent text-[20px] leading-[1]">
           ✦
@@ -46,14 +44,34 @@ export function CountryCard({
         </span>
       </div>
 
-      {/* Button — always bottom */}
-      <Button
-        variant="primary"
-        size="md"
-        className="w-full text-[16px] tracking-[0.08em]"
+      {/* External link button */}
+      <a
+        href={`https://${domain}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Ouvrir le site ${domain} dans un nouvel onglet`}
+        className="block"
       >
-        Accéder au site
-      </Button>
+        <Button
+          variant="primary"
+          size="md"
+          className="w-full text-[16px] tracking-[0.08em]"
+        >
+          <span className="flex items-center justify-center gap-2">
+            Accéder au site
+            <span
+              className="
+                text-[14px]
+                opacity-40
+                translate-y-[1px]
+              "
+              aria-hidden
+            >
+              ↗
+            </span>
+          </span>
+        </Button>
+      </a>
     </CardElement>
   );
 }

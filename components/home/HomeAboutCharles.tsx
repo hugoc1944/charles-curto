@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 
-export function HomeAboutCharles() {
+export function HomeAboutCharles({ anchorId }: { anchorId?: string }) {
   return (
     <section
+     id={anchorId}
       className="
         bg-white
         px-3

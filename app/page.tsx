@@ -3,6 +3,8 @@
 import { motion as m } from "framer-motion";
 import { containerStagger } from "@/styles/motion";
 
+import { useScrollToHash } from "@/hooks/useScrollToHash";
+
 import { PageContainer } from "@/components/layout/PageContainer";
 import { PageSection } from "@/components/layout/PageSection";
 import { PageTransition } from "@/components/layout/PageTransition";
@@ -22,6 +24,7 @@ import { HomeAuthoritySection } from "@/components/home/HomeAuthoritySection";
  * Uses Page Shell correctly.
  */
 export default function HomePage() {
+  useScrollToHash(700);
   return (
     <PageTransition>
       <m.main
@@ -40,7 +43,7 @@ export default function HomePage() {
 
           <PageSection>
             <HomeAncestralHealing />
-            <HomeAboutCharles />
+            <HomeAboutCharles anchorId="home-a-propos"/>
           </PageSection>
         </PageContainer>
 

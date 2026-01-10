@@ -6,6 +6,7 @@ import { motion as m } from "framer-motion";
 import { SectionSeparator } from "@/components/ui/SectionSeparator";
 import type { Ecrit } from "@/lib/ecrits";
 import { PageFade } from "@/components/transitions/PageFade";
+import { VeilLink } from "@/components/navigation/VeilLink";
 
 interface Props {
   ecrits: Ecrit[];
@@ -32,7 +33,7 @@ export default function EcritsClient({ ecrits }: Props) {
 
   return (
     <PageFade>
-    <section className="w-screen bg-[#F6F4EF] pt-32 pb-40">
+    <section className="w-full bg-[#F6F4EF] pt-32 pb-40">
       <div className="max-w-[1100px] mx-auto px-6">
 
         {/* =========================================================
@@ -103,11 +104,11 @@ export default function EcritsClient({ ecrits }: Props) {
                     duration: 0.55,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="group rounded-[18px]"
+                  className="group rounded-[18px] "
                 >
-                  <Link
+                  <VeilLink
                     href={`/ecrits/${ecrit.slug}`}
-                    className="block py-8"
+                    className="block py-8 text-left w-full cursor-pointer"
                   >
                     <h2 className="font-title text-[#1F2E5A] text-[30px] md:text-[38px] leading-[1.15] transition-colors duration-500 group-hover:text-[#C7A36A]">
                       {ecrit.meta.title}
@@ -120,7 +121,7 @@ export default function EcritsClient({ ecrits }: Props) {
                     <p className="mt-3 font-body text-[14px] tracking-[0.18em] uppercase text-[#8F8A7E]">
                       Lecture {ecrit.meta.readingTime}
                     </p>
-                  </Link>
+                  </VeilLink>
                 </m.div>
 
                 {index < filteredEcrits.length - 1 && (
@@ -194,7 +195,7 @@ function ThemeButton({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 rounded-full text-[14px] font-body transition ${
+      className={`px-4 py-2 rounded-full text-[14px] cursor-pointer font-body transition ${
         active
           ? "bg-[#1F2E5A] text-white"
           : "bg-white text-[#1F2E5A] hover:bg-[#ECE9E2]"
