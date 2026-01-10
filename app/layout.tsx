@@ -12,6 +12,7 @@ import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { PageTransitionVeil } from "@/components/layout/PageTransitionVeil";
 import { BookingProvider } from "@/contexts/BookingContext";
 import { BookingModal } from "@/components/booking/BookingModal";
+import Footer from "@/components/layout/Footer";
 
 /* Brand / signature */
 const alexBrush = Alex_Brush({
@@ -69,6 +70,7 @@ export default function RootLayout({
               <BookingModal />
             <div id="page-layer">
                   {children}
+                  <Footer/>
             </div>
           </BookingProvider>
         </NavigationProvider>

@@ -7,7 +7,7 @@ import Link from "next/link";
 export function HomeAuthoritySection() {
   return (
     <FullBleed>
-      <section className="w-full bg-[#FCFAF5] pt-55 pb-55 md:pt-58 px-4">
+      <section className="w-full bg-[#FCFAF5] pt-55 pb-35 md:pt-58 px-4">
         <div className="max-w-[920px] mx-auto flex flex-col items-center gap-7">
           
           {/* =========================================================

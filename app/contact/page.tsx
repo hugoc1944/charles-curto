@@ -53,20 +53,36 @@ export default function ContactPage() {
 
             {/* Email */}
             <div className="mt-10">
-              <h3 className="
-                font-body
-                font-semibold
-                text-[20px]
-                mb-1
-              ">
+              <h3
+                className="
+                  font-body
+                  font-semibold
+                  text-[20px]
+                  mb-1
+                "
+              >
                 Par e-mail
               </h3>
 
-              <p className="font-body text-[17px]">
+              <a
+                href="mailto:contact@charlescurto.fr"
+                className="
+                  font-body
+                  text-[17px]
+                  text-[#1B1E23]
+                  underline
+                  underline-offset-4
+                  decoration-[#1B1E23]/30
+                  transition-all
+                  duration-300
+                  ease-out
+                  hover:decoration-[#1B1E23]/70
+                  hover:opacity-80
+                "
+              >
                 contact@charlescurto.fr
-              </p>
+              </a>
             </div>
-
             {/* Social */}
             <div className="mt-8">
               <h3 className="
@@ -79,68 +95,20 @@ export default function ContactPage() {
               </h3>
 
               <div className="flex gap-1">
-                {/* Instagram */}
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                    className="
-                    text-[#1F2E5A]
-                    transition-transform
-                    duration-300
-                    ease-[cubic-bezier(0.22,1,0.36,1)]
-                    hover:-translate-y-1
-                    "
-                >
-                    <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
-                    <rect
-                        x="2"
-                        y="2"
-                        width="20"
-                        height="20"
-                        rx="5"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                    />
-                    <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                    />
-                    <circle cx="17" cy="7" r="1.3" fill="currentColor" />
-                    </svg>
-                </a>
+              <SocialLink
+              href="https://www.instagram.com/"
+              label="Instagram"
+            >
+              <InstagramIcon />
+              </SocialLink>
 
-                {/* Facebook – square version */}
-                <a
-                    href="#"
-                    aria-label="Facebook"
-                    className="
-                    text-[#1F2E5A]
-                    transition-transform
-                    duration-300
-                    ease-[cubic-bezier(0.22,1,0.36,1)]
-                    hover:-translate-y-1
-                    "
-                >
-                    <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
-                    <rect
-                        x="2"
-                        y="2"
-                        width="20"
-                        height="20"
-                        rx="5"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                    />
-                    <path
-                        d="M13.5 9H15V6.8h-1.8c-2 0-3.2 1.2-3.2 3.4V12H8.5v2.4H10V19h2.6v-4.6h2l.4-2.4h-2.4v-1.6c0-.7.2-1.4 1.3-1.4Z"
-                        fill="currentColor"
-                    />
-                    </svg>
-                </a>
-                </div>
+              <SocialLink
+                href="https://www.facebook.com/"
+                label="Facebook"
+              >
+                <FacebookIcon />
+              </SocialLink> 
+              </div>
 
             </div>
           </div>
@@ -333,5 +301,71 @@ export default function ContactPage() {
         </div>
       </div>
     </section>
+  );
+}
+
+
+
+function SocialLink({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="
+        text-[#1F2E5A]
+        transition-all
+        duration-300
+        ease-out
+        hover:opacity-70
+        active:translate-y-[1px]
+        active:opacity-60
+      "
+    >
+      {children}
+    </a>
+  );
+}
+
+/* ---------- Icons ---------- */
+
+function InstagramIcon() {
+  return (
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37a4 4 0 1 1-7.87 1.17" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
   );
 }

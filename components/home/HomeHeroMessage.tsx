@@ -2,6 +2,7 @@
 
 import { SectionPill } from "@/components/ui/SectionPill";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export function HomeHeroMessage() {
   return (
@@ -102,12 +103,17 @@ export function HomeHeroMessage() {
 
             {/* CTA */}
             <div className="mt-5 sm:mt-6">
-              <Button
-                variant="discover"
-                size="lg"
+              <Link
+                href="/ecrits/alignement-spirituel-et-liberation"
+                aria-label="Lire l’écrit sur l’alignement spirituel et la libération"
               >
-                DÉCOUVRIR
-              </Button>
+                <Button
+                  variant="discover"
+                  size="lg"
+                >
+                  APPROFONDIR
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

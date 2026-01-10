@@ -2,6 +2,7 @@
 
 import { SectionPill } from "@/components/ui/SectionPill";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export function HomeAncestralHealing() {
   return (
@@ -63,12 +64,17 @@ export function HomeAncestralHealing() {
 
             {/* CTA — smaller on mobile */}
             <div className="mt-2 sm:mt-4">
-              <Button
-                variant="discover"
-                size="lg"
+              <Link
+                href="/ecrits/guerison-ancestrale-et-lignees"
+                aria-label="Lire l’écrit sur la guérison ancestrale et les lignées"
               >
-                DÉCOUVRIR
-              </Button>
+                <Button
+                  variant="discover"
+                  size="lg"
+                >
+                  DÉCOUVRIR
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

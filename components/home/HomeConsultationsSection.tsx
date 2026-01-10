@@ -77,13 +77,13 @@ export function HomeConsultationsSection() {
               </Button>
             </Link>
 
-            <Link href="/consultations" className="block w-full">
+            <Link href="/#home-a-propos" className="block w-full">
               <Button
                 variant="authority"
                 size="lg"
                 className="w-full"
               >
-                Réserver votre séance privée
+                À Propos de Charles Curto
               </Button>
             </Link>
           </div>

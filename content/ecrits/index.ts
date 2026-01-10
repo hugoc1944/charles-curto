@@ -2,11 +2,19 @@
 import type { Ecrit } from "@/lib/ecrits";
 
 export const ECRITS: Record<string, Ecrit["meta"]> = {
-  "comprendre-les-repetitions": {
-    title: "Comprendre les répétitions dans une trajectoire de vie",
+  "alignement-spirituel-et-liberation": {
+    title: "Alignement spirituel et libération des chaînes invisibles",
     description:
-      "Pourquoi certaines situations reviennent malgré les décisions prises, et comment en comprendre le sens.",
-    readingTime: "5 min",
-    themes: ["Trajectoires de vie", "Répétitions"],
+      "Lorsque l’énergie se disperse et que le chemin semble freiné, un réalignement intérieur peut redonner cohérence et clarté au mouvement.",
+    readingTime: "6 min",
+    themes: ["Alignement spirituel", "Énergie", "Libération intérieure"],
+  },
+
+  "guerison-ancestrale-et-lignees": {
+    title: "Guérison ancestrale et harmonisation des lignées",
+    description:
+      "Certaines entraves trouvent leur origine au-delà de l’individu. Comprendre les dynamiques de lignée permet parfois de libérer ce qui ne nous appartient pas.",
+    readingTime: "8 min",
+    themes: ["Guérison ancestrale", "Lignées", "Transmission"],
   },
 };

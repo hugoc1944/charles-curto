@@ -12,7 +12,22 @@ export function EcritContent({ slug }: { slug: string }) {
   ) as any;
 
   return (
-    <div className="prose prose-lg max-w-none">
+    <div
+      className="
+        ecrit-content
+        max-w-none
+
+        font-body
+        text-[17px]
+        md:text-[18px]
+        leading-[1.6]
+
+        [&>p]:mb-4
+        [&>p+p]:mt-0
+
+        [&>p:has(+div)]:mb-8
+      "
+    >
       <MDXContent
         components={{
           InsightNote,
