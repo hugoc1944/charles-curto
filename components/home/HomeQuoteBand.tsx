@@ -5,23 +5,49 @@ import { FullBleed } from "@/components/layout/FullBleed";
 export function HomeQuoteBand() {
   return (
     <FullBleed>
-      <section className="w-full bg-[#FCFAF5] mt-25 lg:mt-50">
+      <section className="w-full mt-25 lg:mt-50">
         {/* =========================================================
-           Decorative band (GIF)
+           Decorative band (VIDEO)
         ========================================================== */}
         <div
           className="
+            relative
             w-full
             h-[120px]
             md:h-[220px]
             lg:h-[241px]
-            bg-center
-            bg-cover
+            overflow-hidden
+            bg-black
           "
-          style={{
-            backgroundImage: "url('/gifs/band.gif')",
-          }}
-        />
+          aria-hidden="true"
+        >
+          <video
+          className="
+            absolute
+            inset-0
+            w-full
+            h-full
+            object-cover
+
+            /* Mobile-only overscan fix */
+            max-md:-top-[1px]
+            max-md:-bottom-[1px]
+            max-md:-left-[1px]
+            max-md:-right-[1px]
+            max-md:w-[calc(100%+2px)]
+            max-md:h-[calc(100%+2px)]
+          "
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/placeholder/band.png"
+        >
+          <source src="/videos/band.webm" type="video/webm" />
+          <source src="/videos/band.mp4" type="video/mp4" />
+        </video>
+        </div>
 
         {/* =========================================================
            Quote content
@@ -40,7 +66,6 @@ export function HomeQuoteBand() {
           "
         >
           <div className="max-w-[940px] mx-auto space-y-10">
-            {/* Quote */}
             <p
               className="
                 font-title
@@ -61,23 +86,19 @@ export function HomeQuoteBand() {
               C’est ainsi que s’ouvrent les chemins de ta vie.”
             </p>
 
-            {/* Attribution */}
             <p
               className="
                 font-body
                 font-light
                 text-text
                 text-[22px]
-
                 md:text-[28px]
-
                 tracking-[0.04em]
               "
             >
               — Charles Curto
             </p>
 
-            {/* Mission */}
             <p
               className="
                 mt-25
@@ -86,13 +107,12 @@ export function HomeQuoteBand() {
                 font-light
                 text-[#1F2E5A]
                 text-[22px]
-
                 md:text-[26px]
                 tracking-[0.04em]
               "
             >
-              Accompagner chacun vers cette paix <br/>intérieure
-              est le cœur de ma mission.
+              Accompagner chacun vers cette paix <br />
+              intérieure est le cœur de ma mission.
             </p>
           </div>
         </div>

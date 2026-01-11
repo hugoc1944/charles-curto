@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import { InsightNote } from "@/components/mdx/InsightNote";
 import { EditorialCTA } from "@/components/mdx/EditorialCTA";
 import { SignatureBlock } from "@/components/mdx/SignatureBlock";
+import { Emphasis } from "@/components/mdx/Emphasis";
+import { SoftList } from "@/components/mdx/SoftList";
 
 export function EcritContent({ slug }: { slug: string }) {
   const MDXContent = dynamic(
@@ -20,7 +22,8 @@ export function EcritContent({ slug }: { slug: string }) {
         font-body
         text-[17px]
         md:text-[18px]
-        leading-[1.6]
+        leading-[1.65]
+        md:leading-[1.7]
 
         [&>p]:mb-4
         [&>p+p]:mt-0
@@ -33,6 +36,8 @@ export function EcritContent({ slug }: { slug: string }) {
           InsightNote,
           EditorialCTA,
           SignatureBlock,
+          Emphasis,
+          SoftList,
         }}
       />
     </div>

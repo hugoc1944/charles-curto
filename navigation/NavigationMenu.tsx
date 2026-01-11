@@ -4,12 +4,15 @@ import { motion as m, AnimatePresence } from "framer-motion";
 import { useNavigation } from "@/navigation/NavigationContext";
 import { motion } from "@/styles/motion";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 
 type NavMode = "root" | "ecrits";
 
 export function NavigationMenu() {
-  const { navigateTo } = useNavigation();
+  const { navigateTo, close } = useNavigation();
   const [navMode, setNavMode] = useState<NavMode>("root");
+  const pathname = usePathname();
 
   const items = [
     {
@@ -52,12 +55,20 @@ export function NavigationMenu() {
   const ItemContent = (item: any) => (
     <button
       onClick={() => {
-        if (item.action) {
-          item.action();
-          return;
-        }
-        navigateTo(item.href);
-      }}
+      if (item.action) {
+        item.action();
+        return;
+      }
+
+      // Same route → just close the nav
+      if (item.href === pathname) {
+        close();
+        return;
+      }
+
+      // Different route → normal navigation with veil
+      navigateTo(item.href);
+    }}
       className="relative w-full text-left cursor-pointer"
     >
       {/* Hover background */}
@@ -158,20 +169,22 @@ export function NavigationMenu() {
             }}
           >
             {items.map((item) => (
-              <m.li
-                initial="rest"
-                animate="rest"
-                whileHover="hover"
-                whileTap="hover"
-                transition={{
-                  duration: motion.duration.slow,
-                  ease: motion.ease.calm,
-                }}
-                className="relative"
-              >
-                {ItemContent(item)}
-              </m.li>
-            ))}
+            <m.li
+              key={item.title}
+              initial="rest"
+              animate="rest"
+              whileHover="hover"
+              whileTap="hover"
+              transition={{
+                duration: motion.duration.slow,
+                ease: motion.ease.calm,
+              }}
+              className="relative"
+            >
+              {ItemContent(item)}
+            </m.li>
+          ))}
+
           </m.ul>
         )}
 

@@ -4,7 +4,7 @@ import { VeilLink } from "@/components/navigation/VeilLink";
 
 export default function Footer() {
   return (
-    <footer className="mt-24">
+    <footer className="relative z-[10]">
       {/* MAIN FOOTER */}
       <section className="bg-[#F3F1EC]">
         <div className="mx-auto max-w-[1100px] px-6 py-16">

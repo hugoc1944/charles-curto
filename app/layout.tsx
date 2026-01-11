@@ -13,6 +13,7 @@ import { PageTransitionVeil } from "@/components/layout/PageTransitionVeil";
 import { BookingProvider } from "@/contexts/BookingContext";
 import { BookingModal } from "@/components/booking/BookingModal";
 import Footer from "@/components/layout/Footer";
+import { GlobalGridLines } from "@/components/layout/GlobalGridLines";
 
 /* Brand / signature */
 const alexBrush = Alex_Brush({
@@ -67,10 +68,13 @@ export default function RootLayout({
               <BookToggle />
               <NavigationOverlay />
             </div>
-              <BookingModal />
-            <div id="page-layer">
-                  {children}
-                  <Footer/>
+            <BookingModal />
+            <div id="page-layer" className="relative">
+              <GlobalGridLines />
+              <div className="relative z-[10]">
+                {children}
+                <Footer />
+              </div>
             </div>
           </BookingProvider>
         </NavigationProvider>

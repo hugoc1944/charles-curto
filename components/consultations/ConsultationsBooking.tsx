@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export function ConsultationsBooking() {
   return (
-    <section className="w-full bg-[#FCFAF5] py-2 md:py-24">
+    <section className="w-full py-2 md:py-24">
       <div className="max-w-[1300px] mx-auto px-4 md:px-6">
 
         <SectionSeparator id="consultations-modalites"/>

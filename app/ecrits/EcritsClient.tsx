@@ -33,7 +33,7 @@ export default function EcritsClient({ ecrits }: Props) {
 
   return (
     <PageFade>
-    <section className="w-full bg-[#F6F4EF] pt-32 pb-40">
+    <section className="w-full pt-32 pb-40">
       <div className="max-w-[1100px] mx-auto px-6">
 
         {/* =========================================================

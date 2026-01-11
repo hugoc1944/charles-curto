@@ -15,6 +15,6 @@ export const ECRITS: Record<string, Ecrit["meta"]> = {
     description:
       "Certaines entraves trouvent leur origine au-delà de l’individu. Comprendre les dynamiques de lignée permet parfois de libérer ce qui ne nous appartient pas.",
     readingTime: "8 min",
-    themes: ["Guérison ancestrale", "Lignées", "Transmission"],
+    themes: ["Guérison ancestrale", "Lignées", "Énergie", "Transmission"],
   },
 };

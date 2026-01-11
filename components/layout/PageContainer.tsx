@@ -12,20 +12,10 @@ export function PageContainer({ children, className }: PageContainerProps) {
   return (
     <div
       className={clsx(
-        // Full width wrapper
-        "w-full",
-
-        // Desktop breathing space
-        "px-2",                 // mobile
-        "sm:px-6",              // small tablets
-        "md:px-12",             // tablets
-        "lg:px-[135px]",        // desktop exact spec
-        "pt-3",
-        "md:pt-0",              // small tablets
-        // Content width lock
-        "max-w-[1440px]",
-        "mx-auto",
-
+        "relative z-[10] w-full",
+        "px-2 sm:px-6 md:px-12 lg:px-[135px]",
+        "pt-3 md:pt-0",
+        "max-w-[1440px] mx-auto",
         className
       )}
     >

@@ -5,7 +5,6 @@ export function CoachingStatement() {
     <section
       className="
         w-full
-        bg-[#FCFAF5]
         py-32
         md:py-46
         "

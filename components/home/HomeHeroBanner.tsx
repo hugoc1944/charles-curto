@@ -27,7 +27,7 @@ export function HomeHeroBanner() {
       {/* Desktop image */}
       <div className="hidden md:block">
         <Image
-          src="/images/home/Main_Thumbnail_v2.png"
+          src="/images/home/Main_Thumbnail_3.png"
           alt="Charles Curto"
           priority
           width={1600}

@@ -51,7 +51,7 @@ export function CoachingFAQ() {
   };
 
   return (
-    <section className="w-full bg-[#FCFAF5] py-10">
+    <section className="w-full py-10 mb-24">
       <div className="max-w-[900px] mx-auto px-6">
         {/* Title */}
         <h2 className="font-title text-[48px] leading-[1] md:leading-[1.5] md:text-[64px] text-center mb-6 md:mb-10">

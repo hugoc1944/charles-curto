@@ -1,42 +1,36 @@
 "use client";
 
-import Image from "next/image";
-
 export function ConsultationsThemes() {
   const themes = [
     {
-      src: "/gifs/Chemins_de_vie.gif",
+      key: "chemins-de-vie",
+      video: "/videos/Chemins_de_vie",
+      poster: "/images/placeholder/Chemins_de_vie.png",
       label: "Chemins de vie &\ndécisions essentielles",
     },
     {
-      src: "/gifs/Tensions_familiales.gif",
+      key: "tensions-familiales",
+      video: "/videos/Tensions_familiales",
+      poster: "/images/placeholder/Tensions_familiales.png",
       label: "Tensions familiales\n& relations",
     },
     {
-      src: "/gifs/Blocages_&_schemas_main.gif",
+      key: "blocages-schemas",
+      video: "/videos/Blocages_&_schemas_main",
+      poster: "/images/placeholder/Blocages_&_schemas_main.png",
       label: "Blocages & schémas\nrépétitifs",
     },
     {
-      src: "/gifs/Alignement_interieur.gif",
+      key: "alignement-interieur",
+      video: "/videos/Alignement_interieur",
+      poster: "/images/placeholder/Alignement_interieur.png",
       label: "Alignement intérieur\n& apaisement",
     },
   ];
 
   return (
-    <section
-      className="
-        w-full
-        bg-[#FCFAF5]
-        pb-24
-      "
-    >
-      <div
-        className="
-          max-w-[1200px]
-          mx-auto
-          px-6
-        "
-      >
+    <section className="w-full pb-24">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* ================= TITLE ================= */}
         <h2
           className="
@@ -67,19 +61,29 @@ export function ConsultationsThemes() {
         >
           {themes.map((theme) => (
             <div
-              key={theme.src}
+              key={theme.key}
               className="flex flex-col items-center"
             >
-              {/* Square GIF */}
-              <div className="w-full aspect-square overflow-hidden">
-                <Image
-                  src={theme.src}
-                  alt={theme.label.replace(/\n/g, " ")}
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover"
-                  unoptimized
-                />
+              {/* Square video */}
+              <div className="relative w-full aspect-square overflow-hidden bg-black">
+                <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster={theme.poster}
+                >
+                  <source
+                    src={`${theme.video}.webm`}
+                    type="video/webm"
+                  />
+                  <source
+                    src={`${theme.video}.mp4`}
+                    type="video/mp4"
+                  />
+                </video>
               </div>
 
               {/* Caption */}

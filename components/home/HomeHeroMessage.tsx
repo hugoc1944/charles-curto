@@ -30,13 +30,29 @@ export function HomeHeroMessage() {
       >
         {/* Video */}
         <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/videos/liberer_les_chaines.mp4"
+          className="
+            absolute
+            
+            min-w-full
+            min-h-full
+            object-cover
+          "
           autoPlay
           muted
           loop
           playsInline
-        />
+          preload="auto"
+          poster="/images/placeholder/liberer_les_chaines.png"
+        >
+          <source
+            src="/videos/liberer_les_chaines.webm"
+            type="video/webm"
+          />
+          <source
+            src="/videos/liberer_les_chaines.mp4"
+            type="video/mp4"
+          />
+        </video>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />

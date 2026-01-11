@@ -7,7 +7,6 @@ export function CoachingHeader() {
     <section
       className="
         w-full
-        bg-[#FCFAF5]
         pt-28
         md:pt-36
       "

@@ -19,7 +19,7 @@ export default function ContactPage() {
     }
   }, [sent]);
   return (
-    <section className="w-full bg-[#FCFAF5] py-24 md:py-36">
+    <section className="w-full py-24 md:py-36">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 

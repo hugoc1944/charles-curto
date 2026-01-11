@@ -17,7 +17,7 @@ export function HomeAncestralHealing() {
       {/* DARK BLOCK */}
       <div
         className="
-          max-w-[1170px]
+          max-w-[1200px]
           mx-auto
           bg-[#3A332C]
 
@@ -26,11 +26,12 @@ export function HomeAncestralHealing() {
 
           grid
           grid-cols-1
-          lg:grid-cols-[3fr_2fr]
+          lg:grid-cols-[2.7fr_2.3fr]
           items-center
+          gap-8 lg:gap-10
         "
       >
-        {/* LEFT — TEXT */}
+        {/* LEFT — TEXT (fully centered) */}
         <div className="flex justify-center">
           <div
             className="
@@ -47,31 +48,44 @@ export function HomeAncestralHealing() {
               LIBÉREZ VOS LIGNÉES
             </SectionPill>
 
-            <h2
-              className="
-                font-title
-                font-semibold
-                text-white
-                text-[32px]
-                leading-[1.1]
+            {/* Title */}
+            <h2 className="font-title text-white leading-[1.05]">
+              <span
+                className="
+                  block
+                  px-10
+                  md:px-0
+                  text-[24px]
+                  sm:text-[24px]
+                  md:text-[28px]
+                  font-medium
+                  tracking-[0.04em]
+                  opacity-90
+                "
+              >
+                GUÉRISON ANCESTRALE &amp;
+              </span>
 
-                sm:text-[36px]
-                md:text-[48px]
-              "
-            >
-              GUÉRISON ANCESTRALE &amp; HARMONISATION
+              <span
+                className="
+                  block
+                  text-[36px]
+                  sm:text-[44px]
+                  md:text-[56px]
+                  font-semibold
+                "
+              >
+                HARMONISATION
+              </span>
             </h2>
 
-            {/* CTA — smaller on mobile */}
+            {/* CTA */}
             <div className="mt-2 sm:mt-4">
               <Link
                 href="/ecrits/guerison-ancestrale-et-lignees"
                 aria-label="Lire l’écrit sur la guérison ancestrale et les lignées"
               >
-                <Button
-                  variant="discover"
-                  size="lg"
-                >
+                <Button variant="discover" size="lg">
                   DÉCOUVRIR
                 </Button>
               </Link>
@@ -84,21 +98,30 @@ export function HomeAncestralHealing() {
           className="
             relative
             w-full
-            h-[260px] sm:h-[320px]
-            lg:h-[500px]
-            mt-10 sm:mt-12 lg:mt-0
+            h-[300px] sm:h-[360px]
+            lg:h-[520px]
             bg-[#151a20]
             overflow-hidden
           "
         >
           <video
             className="absolute inset-0 w-full h-full object-cover"
-            src="/videos/liberer_les_chaines.mp4"
             autoPlay
             muted
             loop
             playsInline
-          />
+            preload="metadata"
+            poster="/images/placeholder/guerison_ancestral.png"
+          >
+            <source
+              src="/videos/guerison_ancestral.webm"
+              type="video/webm"
+            />
+            <source
+              src="/videos/guerison_ancestral.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </div>
     </section>
