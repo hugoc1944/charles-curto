@@ -27,7 +27,7 @@ export function HomeHeroBanner() {
       {/* Desktop image */}
       <div className="hidden md:block">
         <Image
-          src="/images/home/Main_Thumbnail_3.png"
+          src="/images/home/Main_Thumbnail_6.png"
           alt="Charles Curto"
           priority
           width={1600}
@@ -39,7 +39,7 @@ export function HomeHeroBanner() {
       {/* Mobile image */}
       <div className="block md:hidden">
         <Image
-          src="/images/home/Main_Thumbnail_mobile_final.png"
+          src="/images/home/Main_Thumbnail_mobile_v4.png"
           alt="Charles Curto"
           priority
           width={900}
