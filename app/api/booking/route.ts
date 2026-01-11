@@ -123,7 +123,7 @@ export async function POST(req: Request) {
       from: "Site Charles Curto <no-reply@charlescurto.fr>",
       to: [process.env.CONTACT_EMAIL!],
       replyTo: email,
-      subject: `Demande de consultation — ${serviceLabel}`,
+      subject: `Demande de consultation - ${serviceLabel}`,
       html: `
         <table width="100%" cellpadding="0" cellspacing="0" style="background:#f7f6f2;padding:32px 0;">
           <tr>
@@ -189,7 +189,7 @@ export async function POST(req: Request) {
     ========================================================== */
 
     await resend.emails.send({
-      from: "Charles Curto — Secrétariat <contact@charlescurto.fr>",
+      from: "Charles Curto - Secrétariat <contact@charlescurto.fr>",
       to: [email],
       subject: "Votre demande de consultation a bien été transmise",
       html: `
