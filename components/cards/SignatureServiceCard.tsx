@@ -63,7 +63,18 @@ export function SignatureServiceCard() {
         variant="primary"
         size="lg"
         className="w-full text-[18px] leading-[1.2] tracking-[0.08em] font-semibold normal-case py-[18px] mt-10"
-        onClick={() => openBooking("signature")}
+                  onClick={() => {
+            if (typeof window !== "undefined") {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: "booking_start",
+                service_type: "signature",
+                service_category: "coaching",
+              });
+            }
+
+            openBooking("signature");
+          }}
       >
         Réserver la Séance Signature
       </Button>

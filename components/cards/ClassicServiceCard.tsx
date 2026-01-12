@@ -42,7 +42,18 @@ export function ClassicServiceCard() {
         variant="primary"
         size="lg"
         className="w-full text-[18px] normal-case mt-8 leading-[1]"
-        onClick={() => openBooking("classic")}
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: "booking_start",
+                service_type: "classic",
+                service_category: "consultation",
+              });
+            }
+
+            openBooking("classic");
+          }}
       >
         Réserver une consultation — téléphone / cabinet
       </Button>

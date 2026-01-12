@@ -45,7 +45,18 @@ export function UrgentServiceCard() {
         variant="primary"
         size="lg"
         className="w-full text-[18px] normal-case mt-8 leading-[1] "
-        onClick={() => openBooking("urgent")}
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: "booking_start",
+                service_type: "urgent",
+                service_category: "consultation",
+              });
+            }
+
+            openBooking("urgent");
+          }}
       >
         Demande urgente — téléphone / visio
       </Button>

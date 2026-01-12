@@ -1,13 +1,23 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
+import { useEffect } from "react";
 
 interface SuccessStepProps {
   onClose?: () => void;
 }
 
-export function SuccessStep({ onClose }: SuccessStepProps) {
-  return (
+export function SuccessStep({ onClose }: SuccessStepProps) { 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: "booking_submit_success",
+        });
+        }
+    }, []);
+    
+    return (
     <div className="flex flex-col items-center justify-center text-center max-w-[420px] mx-auto space-y-6">
       
       {/* Visual anchor */}
