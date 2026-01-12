@@ -5,7 +5,6 @@ import Image from "next/image";
 export function HomeAboutCharles({ anchorId }: { anchorId?: string }) {
   return (
     <section
-     id={anchorId}
       className="
         bg-white
         px-3
@@ -29,6 +28,7 @@ export function HomeAboutCharles({ anchorId }: { anchorId?: string }) {
         {/* IMAGE HEIGHT ROW */}
         <div className="lg:col-span-2">
           <div
+            id={anchorId}
             className="
               grid
               grid-cols-1

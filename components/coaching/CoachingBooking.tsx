@@ -80,13 +80,32 @@ export function CoachingBooking() {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-20">
-          <TestimonialCard quote="Précis et profondément structurant." author="Paris" />
-          <TestimonialCard quote="Un accompagnement rare dans la durée." author="Nice" />
-          <TestimonialCard quote="Clarté et stabilité sur le long terme." author="Lisbonne" />
-          <TestimonialCard quote="Présence constante et juste." author="Toulouse" />
-          <TestimonialCard quote="Un travail sérieux, sans promesse creuse." author="Madrid" />
-          <TestimonialCard quote="Une relation de confiance." author="Porto" />
+          <TestimonialCard
+            quote="Un accompagnement qui s’inscrit dans le temps, avec beaucoup de justesse."
+            author="Anne S., Paris"
+          />
+          <TestimonialCard
+            quote="La relation s’est construite progressivement, sans pression ni promesse."
+            author="Claire B., Nice"
+          />
+          <TestimonialCard
+            quote="Une présence stable, qui permet d’avancer sans se disperser."
+            author="Hélène M., Genève"
+          />
+          <TestimonialCard
+            quote="Le travail a apporté une cohérence durable, pas un effet ponctuel."
+            author="Sophie L., Lyon"
+          />
+          <TestimonialCard
+            quote="Une parole mesurée, mais toujours juste dans les moments clés."
+            author="Isabelle R., Madrid"
+          />
+          <TestimonialCard
+            quote="Une relation de confiance, construite dans le respect du rythme."
+            author="Marion C., Lisbonne"
+          />
         </div>
+
 
         <SectionSeparator />
 

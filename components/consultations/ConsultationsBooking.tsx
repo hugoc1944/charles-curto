@@ -68,13 +68,31 @@ export function ConsultationsBooking() {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-20">
-          <TestimonialCard className="" quote="Précis et apaisant — j’ai pu décider." author="Paris" />
-          <TestimonialCard quote="Décision prise sereinement." author="Nice" />
-          <TestimonialCard quote="RDV rapide, clarté immédiate." author="Lisbon" />
-          <TestimonialCard quote="Plan d’action limpide." author="Toulouse" />
-          <TestimonialCard quote="Sans jugement, mais d’une justesse rare." author="Madrid" />
-          <TestimonialCard quote="Très haut niveau." author="Porto" />
-        </div>
+        <TestimonialCard
+          quote="En une heure, la situation est devenue lisible. J’ai pu trancher sans agitation."
+          author="Anne L., Paris (tél)"
+        />
+        <TestimonialCard
+          quote="Écoute précise, sans détour. Ce qui comptait est apparu clairement."
+          author="Claire M., Nice (visio)"
+        />
+        <TestimonialCard
+          quote="Je suis repartie apaisée, avec une décision simple et assumée."
+          author="Sophie R., Lyon (tél)"
+        />
+        <TestimonialCard
+          quote="Aucune projection, aucun jugement. Une lecture juste de ce que je vivais."
+          author="Élise D., Paris (cabinet)"
+        />
+        <TestimonialCard
+          quote="Le cadre m’a permis d’y voir clair là où tout se mélangeait."
+          author="Isabelle P., Genève (visio)"
+        />
+        <TestimonialCard
+          quote="Sobriété, précision, efficacité. Rien de superflu."
+          author="Marion T., Toronto (tél)"
+        />
+      </div>
 
         <SectionSeparator />
 

@@ -49,16 +49,16 @@ export function HomeConsultationsSection() {
         ========================================================== */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[960px] mx-auto">
           <TestimonialCard
-            quote="En 30 minutes, j’ai compris et décidé. Changement immédiat."
+            quote="En 30 minutes, tout s’est clarifié. J’ai posé une décision que je repoussais depuis longtemps."
             author="Anne S., Paris (tél)"
           />
           <TestimonialCard
-            quote="En 30 minutes, j’ai compris et décidé. Changement immédiat."
-            author="Anne S., Paris (tél)"
+            quote="Échange précis, sans détour. Une compréhension immédiate de ce qui bloquait."
+            author="Claire M., Lyon (visio)"
           />
           <TestimonialCard
-            quote="En 30 minutes, j’ai compris et décidé. Changement immédiat."
-            author="Anne S., Paris (tél)"
+            quote="Ce n’était pas ce que je pensais chercher, mais c’était exactement juste."
+            author="Élise P., Genève (visio)"
           />
         </div>
 
@@ -77,15 +77,14 @@ export function HomeConsultationsSection() {
               </Button>
             </Link>
 
-            <Link href="/#home-a-propos" className="block w-full">
-              <Button
-                variant="authority"
-                size="lg"
-                className="w-full"
-              >
-                À Propos de Charles Curto
-              </Button>
-            </Link>
+            <Button
+              variant="authority"
+              size="lg"
+              className="w-full"
+              onClick={() => scrollToId("home-a-propos")}
+            >
+              À Propos de Charles Curto
+            </Button>
           </div>
         </div>
 
