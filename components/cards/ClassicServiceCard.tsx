@@ -30,7 +30,7 @@ export function ClassicServiceCard() {
         className="mt-4 text-[15px]"
         items={[
           "Séance d’une heure",
-          "Téléphone ou cabinet (Paris / Lyon)",
+          "Téléphone ou cabinet (Paris / Nice)",
           "Échange confidentiel et sans jugement",
           "Le meilleur choix « calme & premium »",
         ]}

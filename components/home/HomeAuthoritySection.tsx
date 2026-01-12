@@ -34,7 +34,7 @@ export function HomeAuthoritySection() {
               de quarante ans des personnes{" "}
               <span className="font-normal">en France, en Europe et au-delà</span>.
               Ses consultations,{" "}
-              <span className="font-normal">par téléphone ou en présentiel à Paris et Lyon</span>,
+              <span className="font-normal">par téléphone ou en présentiel à Paris et Nice</span>,
               offrent une guidance claire, apaisante et directement orientée vers la
               résolution de vos problématiques essentielles.
             </p>

@@ -77,7 +77,7 @@ export function CoachingHeader() {
           <TrustPill>Relation de confiance</TrustPill>
           <TrustPill>Présence continue</TrustPill>
           <TrustPill>Coaching individuel</TrustPill>
-          <TrustPill>Paris · Lyon</TrustPill>
+          <TrustPill>Paris · Nice</TrustPill>
         </div>
       </div>
     </section>

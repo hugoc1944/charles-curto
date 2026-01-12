@@ -1,64 +1,19 @@
-"use client";
+import type { Metadata } from "next";
+import HomeClient from "@/components/home/HomeClient";
 
-import { motion as m } from "framer-motion";
-import { containerStagger } from "@/styles/motion";
+export const metadata: Metadata = {
+  title: "Charles Curto",
+  description:
+    "Charles Curto est un accompagnant spirituel indépendant. Son approche repose sur la clarté intérieure, l’écoute profonde et une présence structurante, au service de celles et ceux en recherche de sens.",
 
-import { useScrollToHash } from "@/hooks/useScrollToHash";
+  openGraph: {
+    title: "Charles Curto",
+    description:
+      "Présence, clarté intérieure et accompagnement spirituel. Découvrir le parcours et la démarche de Charles Curto.",
+  },
+};
 
-import { PageContainer } from "@/components/layout/PageContainer";
-import { PageSection } from "@/components/layout/PageSection";
-import { PageTransition } from "@/components/layout/PageTransition";
 
-import { HomeHeroBanner } from "@/components/home/HomeHeroBanner";
-import { HomeHeroMessage } from "@/components/home/HomeHeroMessage";
-import { HomeAncestralHealing } from "@/components/home/HomeAncestralHealing";
-import { HomeAboutCharles } from "@/components/home/HomeAboutCharles";
-import { HomeQuoteBand } from "@/components/home/HomeQuoteBand";
-import { HomeConsultationsSection } from "@/components/home/HomeConsultationsSection";
-import { HomeAuthoritySection } from "@/components/home/HomeAuthoritySection";
-
-/**
- * ACCUEIL (Home)
- *
- * Root page (/)
- * Uses Page Shell correctly.
- */
-export default function HomePage() {
-  useScrollToHash(700);
-  return (
-    <PageTransition>
-      <m.main
-        variants={containerStagger}
-        initial="hidden"
-        animate="visible"
-        className="w-full"
-      >
-        {/* =========================================================
-        ========================================================== */}
-        <PageContainer>
-          <PageSection>
-            <HomeHeroBanner />
-            <HomeHeroMessage />
-          </PageSection>
-
-          <PageSection>
-            <HomeAncestralHealing />
-            <HomeAboutCharles anchorId="home-a-propos"/>
-          </PageSection>
-        </PageContainer>
-
-        {/* ===================== FULL BLEED ===================== */}
-        <HomeQuoteBand />
-
-        <PageContainer>
-          <PageSection>
-            <HomeConsultationsSection />
-          </PageSection>
-        </PageContainer>
-        
-        <HomeAuthoritySection />
-
-      </m.main>
-    </PageTransition>
-  );
+export default function Page() {
+  return <HomeClient />;
 }

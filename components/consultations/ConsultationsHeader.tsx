@@ -74,7 +74,7 @@ export function ConsultationsHeader() {
           <TrustPill>Une pratique reconnue</TrustPill>
           <TrustPill>40+ ans d’expérience</TrustPill>
           <TrustPill>Guidance confidentielle</TrustPill>
-          <TrustPill>Paris · Lyon</TrustPill>
+          <TrustPill>Paris · Nice</TrustPill>
         </div>
       </div>
     </section>

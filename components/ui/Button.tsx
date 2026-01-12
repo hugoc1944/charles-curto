@@ -104,7 +104,7 @@ export function Button({
 
         // Discover spacing (wider)
         size === "md" && isDiscover && "px-16 py-3 text-[15px]",
-        size === "lg" && isDiscover && "px-16 md:px-26 py-3 md:py-4 text-[21px]",
+        size === "lg" && isDiscover && "px-16 md:px-26 py-3 md:py-4 text-[19px] md:text-[21px]",
 
         // Variants
         variant === "primary" &&

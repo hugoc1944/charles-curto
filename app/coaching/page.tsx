@@ -1,40 +1,19 @@
-"use client";
+import type { Metadata } from "next";
+import CoachingClient from "@/components/coaching/CoachingClient";
 
-import { motion as m } from "framer-motion";
-import { containerStagger } from "@/styles/motion";
+export const metadata: Metadata = {
+  title: "Coaching privé — Accompagnement dans la durée",
+  description:
+    "Un accompagnement individuel dans la durée, fondé sur la clarté, la stabilité et une relation de confiance. Une présence continue pour traverser les étapes essentielles de votre vie.",
 
-import { PageContainer } from "@/components/layout/PageContainer";
-import { PageSection } from "@/components/layout/PageSection";
-import { PageTransition } from "@/components/layout/PageTransition";
-import { CoachingHeader } from "@/components/coaching/CoachingHeader";
-import { CoachingStatement } from "@/components/coaching/CoachingStatement";
-import { ConsultationsThemes } from "@/components/consultations/ConsultationsThemes";
-import { CoachingCoreStatement } from "@/components/coaching/CoachingCoreStatement";
-import { CoachingBooking } from "@/components/coaching/CoachingBooking";
-import { AboutCharles } from "@/components/consultations/AboutCharles";
-import { CoachingFAQ } from "@/components/coaching/CoachingFAQ";
-import { useScrollToHash } from "@/hooks/useScrollToHash";
+  openGraph: {
+    title: "Coaching privé — Charles Curto",
+    description:
+      "Un accompagnement individuel et confidentiel, construit dans le temps, pour avancer avec clarté, stabilité et discernement.",
+  },
+};
 
 
-
-export default function CoachingPage() {
-  useScrollToHash(600);
-  return (
-    <PageTransition>
-        <m.main
-        variants={containerStagger}
-        initial="hidden"
-        animate="visible"
-        className="w-full"
-        >
-          <CoachingHeader/>
-          <CoachingStatement/>
-          <ConsultationsThemes/>
-          <CoachingCoreStatement/>
-          <CoachingBooking/>
-          <AboutCharles/>
-          <CoachingFAQ/>
-        </m.main>
-    </PageTransition>
-  );
+export default function Page() {
+  return <CoachingClient />;
 }

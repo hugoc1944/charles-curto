@@ -1,37 +1,18 @@
-"use client";
+import type { Metadata } from "next";
+import ConsultationsClient from "@/components/consultations/ConsultationsClient";
 
-import { motion as m } from "framer-motion";
-import { containerStagger } from "@/styles/motion";
+export const metadata: Metadata = {
+  title: "Consultations privées — Séance individuelle",
+  description:
+    "Une consultation confidentielle d’une heure pour éclairer une situation essentielle, prendre une décision ou retrouver de la clarté. Séances individuelles, sur rendez-vous.",
 
-import { PageContainer } from "@/components/layout/PageContainer";
-import { PageSection } from "@/components/layout/PageSection";
+  openGraph: {
+    title: "Consultations privées — Charles Curto",
+    description:
+      "Une séance individuelle et confidentielle pour clarifier une situation, prendre une décision ou apaiser un moment clé.",
+  },
+};
 
-import { ConsultationsHeader } from "@/components/consultations/ConsultationsHeader";
-import { PageTransition } from "@/components/layout/PageTransition";
-import { ConsultationsThemes } from "@/components/consultations/ConsultationsThemes";
-import { ConsultationsBooking } from "@/components/consultations/ConsultationsBooking";
-import { AboutCharles } from "@/components/consultations/AboutCharles";
-import { ConsultationsFAQ } from "@/components/consultations/ConsultationsFAQ";
-import { useScrollToHash } from "@/hooks/useScrollToHash";
-
-export default function ConsultationsPage() {
-  useScrollToHash(600);
-  return (
-    <PageTransition>
-        <m.main
-        variants={containerStagger}
-        initial="hidden"
-        animate="visible"
-        className="w-full"
-        >
-        {/* ===================== HEADER (FULL BLEED) ===================== */}
-        <ConsultationsHeader />
-        <ConsultationsThemes />
-        <ConsultationsBooking />
-        <AboutCharles/>
-        <ConsultationsFAQ />
-
-        </m.main>
-    </PageTransition>
-  );
+export default function Page() {
+  return <ConsultationsClient />;
 }

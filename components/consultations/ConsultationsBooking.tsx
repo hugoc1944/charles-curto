@@ -69,7 +69,7 @@ export function ConsultationsBooking() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-20">
           <TestimonialCard className="" quote="Précis et apaisant — j’ai pu décider." author="Paris" />
-          <TestimonialCard quote="Décision prise sereinement." author="Lyon" />
+          <TestimonialCard quote="Décision prise sereinement." author="Nice" />
           <TestimonialCard quote="RDV rapide, clarté immédiate." author="Lisbon" />
           <TestimonialCard quote="Plan d’action limpide." author="Toulouse" />
           <TestimonialCard quote="Sans jugement, mais d’une justesse rare." author="Madrid" />

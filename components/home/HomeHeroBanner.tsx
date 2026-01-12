@@ -44,7 +44,7 @@ export function HomeHeroBanner() {
           priority
           width={900}
           height={1200}
-          className="w-full h-[72vh] object-cover"
+          className="w-full h-[72vh] object-cover object-bottom"
         />
       </div>
     </div>

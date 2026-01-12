@@ -4,9 +4,9 @@ import type { Metadata } from "next";
    Metadata (Server-safe)
 ---------------------------------------------- */
 export const metadata: Metadata = {
-  title: "Politique de confidentialité - Charles Curto",
+  title: "Politique de confidentialité — Charles Curto",
   description:
-    "Politique de confidentialité du site Charles Curto, conformément au Règlement Général sur la Protection des Données (RGPD).",
+    "Politique de confidentialité du site Charles Curto, détaillant la collecte, l’utilisation et la protection des données personnelles conformément au RGPD.",
 };
 
 /* ---------------------------------------------

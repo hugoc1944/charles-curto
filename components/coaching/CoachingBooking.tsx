@@ -81,7 +81,7 @@ export function CoachingBooking() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-20">
           <TestimonialCard quote="Précis et profondément structurant." author="Paris" />
-          <TestimonialCard quote="Un accompagnement rare dans la durée." author="Lyon" />
+          <TestimonialCard quote="Un accompagnement rare dans la durée." author="Nice" />
           <TestimonialCard quote="Clarté et stabilité sur le long terme." author="Lisbonne" />
           <TestimonialCard quote="Présence constante et juste." author="Toulouse" />
           <TestimonialCard quote="Un travail sérieux, sans promesse creuse." author="Madrid" />

@@ -52,7 +52,7 @@ export function SignatureServiceCard() {
         items={[
           "Échange confidentiel et sans jugement",
           "Séance d’une heure",
-          "Téléphone ou cabinet (Paris / Lyon)",
+          "Téléphone ou cabinet (Paris / Nice)",
           "Aucune obligation de poursuivre",
         ]}
       />

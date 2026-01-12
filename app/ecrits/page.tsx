@@ -3,7 +3,7 @@ import { getAllEcrits } from "@/lib/ecrits";
 import EcritsClient from "./EcritsClient";
 
 export const metadata: Metadata = {
-  title: "Écrits - Réflexions & lectures | Charles Curto",
+  title: "Écrits — Réflexions et transmissions",
   description:
     "Une sélection d’écrits et de réflexions autour des trajectoires de vie, de l’intuition et des transmissions invisibles.",
 };

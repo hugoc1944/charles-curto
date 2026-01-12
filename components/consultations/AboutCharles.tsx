@@ -132,7 +132,7 @@ export function AboutCharles() {
           >
             Charles Curto accompagne depuis plus de quarante ans celles et ceux qui cherchent
             clarté et apaisement spirituel. Il commence sa pratique à Paris en 1982, avant de
-            l’étendre à Toulouse, Lyon, Madrid, Toronto, Montreal et Lisbonne. Son approche unit
+            l’étendre à Toulouse, Nice, Madrid, Toronto, Montreal et Lisbonne. Son approche unit
             lecture spirituelle, alignement énergétique et guidance concrète. Plus de 40 000
             personnes ont fait appel à lui, certaines depuis plusieurs décennies.
           </p>

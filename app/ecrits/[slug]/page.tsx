@@ -19,8 +19,14 @@ export async function generateMetadata(
   const ecrit = getEcritBySlug(slug);
 
   return {
-    title: `${ecrit.meta.title} — Charles Curto`,
+    title: ecrit.meta.title,
     description: ecrit.meta.description,
+
+    openGraph: {
+        type: "article",
+        title: ecrit.meta.title,
+        description: ecrit.meta.description,
+    },
   };
 }
 
