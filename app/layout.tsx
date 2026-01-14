@@ -91,6 +91,7 @@ export default function RootLayout({
           `,
         }}
       />
+      <meta name="facebook-domain-verification" content="kf8xxjtt9b29t6pxqfnyzdfbdn8pu6" />
     </head>
 
       <body>
