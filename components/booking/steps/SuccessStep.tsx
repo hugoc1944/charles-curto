@@ -16,7 +16,13 @@ export function SuccessStep({ onClose }: SuccessStepProps) {
         });
         }
     }, []);
-    
+
+    useEffect(() => {
+    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Lead");
+    }
+  }, []);
+
     return (
     <div className="flex flex-col items-center justify-center text-center max-w-[420px] mx-auto space-y-6">
       
