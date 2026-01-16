@@ -26,11 +26,8 @@ export function CookieConsentBanner() {
 
   function saveConsent(value: Consent) {
     localStorage.setItem(CONSENT_KEY, JSON.stringify(value));
-    window.dispatchEvent(
-      new CustomEvent("cc-consent-updated", { detail: value })
-    );
-    setVisible(false);
-  }
+    location.reload();
+    }
 
   if (!visible) return null;
 
