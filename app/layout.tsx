@@ -15,6 +15,7 @@ import { BookingModal } from "@/components/booking/BookingModal";
 import Footer from "@/components/layout/Footer";
 import { GlobalGridLines } from "@/components/layout/GlobalGridLines";
 import Script from "next/script";
+import { CookieConsentBanner } from "@/components/consent/CookieConsentBanner";
 
 /* Brand / signature */
 const alexBrush = Alex_Brush({
@@ -122,6 +123,7 @@ export default function RootLayout({
             </div>
           </BookingProvider>
         </NavigationProvider>
+        <CookieConsentBanner />
       </body>
     </html>
   );

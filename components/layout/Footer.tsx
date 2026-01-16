@@ -54,6 +54,14 @@ export default function Footer() {
                 <FooterLink href="/politique-des-cookies">
                   Politique des cookies
                 </FooterLink>
+                <FooterLink
+                    onClick={() => {
+                    localStorage.removeItem("cc_cookie_consent");
+                    location.reload();
+                    }}
+                >
+                    Gestion des cookies
+                </FooterLink>
               </FooterGroup>
             </div>
 
@@ -190,27 +198,40 @@ function FooterGroup({
 
 function FooterLink({
   href,
+  onClick,
   children,
 }: {
-  href: string;
+  href?: string;
+  onClick?: () => void;
   children: React.ReactNode;
 }) {
+  const className = `
+    relative
+    block
+    w-fit
+    cursor-pointer
+    transition-all
+    duration-300
+    ease-out
+    hover:opacity-75
+    active:translate-y-[1px]
+    active:opacity-70
+  `;
+
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className={className}
+      >
+        {children}
+      </button>
+    );
+  }
+
   return (
-    <VeilLink
-      href={href}
-      className="
-        relative
-        block
-        w-fit
-        cursor-pointer
-        transition-all
-        duration-300
-        ease-out
-        hover:opacity-75
-        active:translate-y-[1px]
-        active:opacity-70
-      "
-    >
+    <VeilLink href={href!} className={className}>
       {children}
     </VeilLink>
   );
