@@ -131,14 +131,14 @@ export default function Footer() {
 
           <div className="flex items-center gap-8">
             <SocialLink
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/charlescurto.fr"
               label="Instagram"
             >
               <InstagramIcon />
             </SocialLink>
 
             <SocialLink
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/profile.php?id=61586301611184"
               label="Facebook"
             >
               <FacebookIcon />

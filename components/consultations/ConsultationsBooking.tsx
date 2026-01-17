@@ -57,9 +57,17 @@ export function ConsultationsBooking() {
               Une question avant de réserver ? Écrivez-nous
             </Button>
           </Link>
-          <Button variant="authority" size="lg">
-            Ressources gratuites — Instagram
-          </Button>
+            <a
+              href="https://www.instagram.com/charlescurto.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+              aria-label="Accéder aux ressources gratuites de Charles Curto sur Instagram"
+            >
+              <Button variant="authority" size="lg">
+                Ressources gratuites — Instagram
+              </Button>
+            </a>
         </div>
 
         {/* Testimonials */}
