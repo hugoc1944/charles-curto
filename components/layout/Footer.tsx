@@ -154,11 +154,12 @@ export default function Footer() {
       <section className="bg-[#1F2E5A]">
         <div className="mx-auto max-w-[1100px] px-6 py-4">
           <p className="text-center text-[15px] tracking-wide text-white/80">
-            © 2026 Charles Curto. Tous droits réservés – Conception :{" "}
+            © 2026 Charles Curto. Tous droits réservés –{" "}
             <a
-              href="https://webtogo.pt"
+              href="https://webtogo.studio"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
+              title="Webtogo Studio, web design et développement au Portugal"
               className="
                 underline
                 transition-opacity
@@ -166,7 +167,7 @@ export default function Footer() {
                 hover:opacity-90
               "
             >
-              webtogo
+              Conçu et développé par Webtogo Studio
             </a>
           </p>
         </div>
